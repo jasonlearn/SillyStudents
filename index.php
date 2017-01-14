@@ -44,8 +44,10 @@ and open the template in the editor.
         $myself->add_grade(95);
         $myself->add_grade(90);
         $myself->add_grade(85);
-        $myself['a008'] = $myself;
+        $students['a008'] = $myself;
 
+        ksort($students); // one of the many sort functions
+        
         foreach($students as $student)
             echo $student->toString();
         ?>
