@@ -6,13 +6,15 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>COMP 4711 - Lab 1</title>
     </head>
     <body>
         <?php
         include('Student.php');
 
+        $students = array();
+        
         $first = new Student();
         $first->surname = "Doe";
         $first->first_name = "John";
@@ -43,8 +45,6 @@ and open the template in the editor.
         $myself->add_grade(90);
         $myself->add_grade(85);
         $myself['a008'] = $myself;
-
-        $students = array();
 
         foreach($students as $student)
             echo $student->toString();
